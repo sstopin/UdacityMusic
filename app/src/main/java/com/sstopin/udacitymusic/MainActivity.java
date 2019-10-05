@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Set a click listener on album View
         albums.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the albums View is clicked on.
+            // The code in this method will be executed when the albums View is clicked on
+            // and highlight the textview.
             @Override
             public void onClick(View view) {
                 albums.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -37,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Set a click listener on songs View
         songs.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the albums View is clicked on.
+            // The code in this method will be executed when the albums View is clicked on
+            // and highlight the textview.
             @Override
             public void onClick(View view) {
                 albums.setBackgroundColor(getResources().getColor(R.color.transparent));
@@ -48,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Set a click listener on artist View
         artists.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the albums View is clicked on.
+            // The code in this method will be executed when the albums View is clicked on
+            // and highlight the textview.
             @Override
             public void onClick(View view) {
                 albums.setBackgroundColor(getResources().getColor(R.color.transparent));
