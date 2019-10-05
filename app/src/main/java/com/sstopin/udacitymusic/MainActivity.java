@@ -3,7 +3,10 @@ package com.sstopin.udacitymusic;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,17 +20,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Find the Views of the albums, songs and artist textviews
-        TextView albums = (TextView) findViewById(R.id.albums);
-        TextView songs = (TextView) findViewById(R.id.songs);
-        TextView artists = (TextView) findViewById(R.id.artists);
-        Button buttonClicked = (Button) findViewById(R.id.buttonxx);
+        final TextView albums = (TextView) findViewById(R.id.albums);
+        final TextView songs = (TextView) findViewById(R.id.songs);
+        final TextView artists = (TextView) findViewById(R.id.artists);
 
         // Set a click listener on album View
         albums.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the albums View is clicked on.
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "album clicked", Toast.LENGTH_LONG).show();
+                albums.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                songs.setBackgroundColor(getResources().getColor(R.color.transparent));
+                artists.setBackgroundColor(getResources().getColor(R.color.transparent));
             }
         });
 
@@ -36,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the albums View is clicked on.
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "songs clicked", Toast.LENGTH_LONG).show();
+                albums.setBackgroundColor(getResources().getColor(R.color.transparent));
+                songs.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                artists.setBackgroundColor(getResources().getColor(R.color.transparent));
             }
         });
 
@@ -45,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the albums View is clicked on.
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "artists clicked", Toast.LENGTH_LONG).show();
+                albums.setBackgroundColor(getResources().getColor(R.color.transparent));
+                songs.setBackgroundColor(getResources().getColor(R.color.transparent));
+                artists.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 

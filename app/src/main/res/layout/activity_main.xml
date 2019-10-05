@@ -25,12 +25,6 @@
             android:id="@+id/artists"
             style="@style/album_song_artist"
             android:text="@string/artists"/>
-        <Button
-            android:id="@+id/buttonxx"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="button"/>
 
     </LinearLayout>
 
